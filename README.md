@@ -42,7 +42,7 @@ Esta API permite gestionar usuarios con autenticación JWT. Por el momento inclu
 - `POST /api/login`: Autenticar un usuario y obtener un token JWT.
 
 ### Diagrama de solución
-![Diagrama de solución](https://raw.githubusercontent.com/mjverap/nisum-tech-test-api/main/diagrama-solucion.png)
+![Diagrama de solución](https://raw.githubusercontent.com/mjverap/nisum-tech-test-api/refs/heads/master/diagrama-solucion.png)
 
 #### Autor 
 [María José Vera](https://github.com/mjverap)
