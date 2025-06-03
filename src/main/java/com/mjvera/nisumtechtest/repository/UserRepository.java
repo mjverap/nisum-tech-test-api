@@ -1,0 +1,22 @@
+package com.mjvera.nisumtechtest.repository;
+
+import com.mjvera.nisumtechtest.model.User;
+import jakarta.transaction.Transactional;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import java.util.Date;
+import java.util.Optional;
+import java.util.UUID;
+
+@Repository
+public interface UserRepository extends JpaRepository<User, UUID> {
+    Optional<User> findByEmail(String email);
+
+    @Query("update User u set u.lastLogin = :lastLogin where u.email = :email")
+    @Modifying
+    @Transactional
+    void updateLastLoginByEmail(Date lastLogin, String email);
+}
